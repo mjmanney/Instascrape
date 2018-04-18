@@ -58,7 +58,7 @@ function appendPostsToGrid (posts) {
   .then(images => {
     $.each(images, (i, img) => {
       $(img).hide()
-      $('.photo-grid').append(img)
+      $('.photo-grid').prepend(img)
       $(img).fadeIn(2000, 'linear')
     })
   })
@@ -86,9 +86,7 @@ function jqXHR () {
     after:    main.cursor
   }
 
-  var modifiedUrl = main.cursor === '' ?
-                    main.url.initial + main.tag + "/?__a=1"     :
-                    main.url.subsequent + JSON.stringify(query) ;
+  var modifiedUrl = main.url.initial + main.tag + "/?__a=1"
 
   request.url = modifiedUrl
   $.get(request)
