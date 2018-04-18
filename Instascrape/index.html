@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Instagram Scrape</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="modal">
+      <img id="focusImg" src="">
+      <div class="info-wrapper">
+        <div class="caption"></div>
+        <br>
+        <div class="likes"></div>
+        <div class="score"></div>
+        <div class="timestamp"></div>
+        <a   class="op customLink" href="" target="_blank">original post</a>
+      </div>
+    </div>
+
+    <div id="left-panel">
+      <h1>Instascrape</h1>
+      <p>
+        Developers can use this technique to get media from Instagram without
+        using their API.
+      </p>
+      <p>
+        This workaround was found by
+        <a
+          href="http://tomkdickinson.co.uk/2016/12/extracting-instagram-data-part-1/"
+          class="customLink"
+          target="_blank"
+        >
+          Tom Dickinson
+        </a>
+        who explains the technique and provides a link to his Python repository.
+        My demo builds on this, although less complex, using JS only.
+      </p>
+      <p>
+        Search a hashtag and click on a photo to view an image.  Note that the images
+        displayed may have been posted in recent minutes.
+      </p>
+      <span id="user-input-wrapper">
+        <span>#</span>
+        <input  id="user-input" class="hashtag-input" type="text" name="hashtag" placeholder="type in a hashtag" value="">
+      </span>
+      <button id="search"     class="hashtag-input" type="button" name="search">Search</button>
+      <!--<button id="load-next"  class="controls" type="button" name="button" disabled>Load More</button>-->
+      <div class="loading"></div>
+    </div>
+
+    <div class="heading">
+      <h1><span class='red'>Load public facing media into your application.</span></h1>
+      <h2><span class='orange'>No API key or authentication required.</span></h2>
+    </div>
+
+    <div class="photo-grid"></div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="instagram-search.js" type="text/javascript"></script>
+  </body>
+</html>
